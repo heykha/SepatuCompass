@@ -5,7 +5,7 @@ include("config.php");
 
 function cek($url){
     sleep(1);
-    $cek = file_get_contents(https://lupabapak.com/sepatu/api.php?url=$url");
+    $cek = file_get_contents("https://lupabapak.com/sepatu/api.php?url=$url");
     if(preg_match("/yes/", $cek)){
         $text = "Silahkan Dibuy Lurrr!!! || ".$url;
         $res = file_get_contents("https://api.telegram.org/bot$BOT_TOKEN/sendMessage?chat_id=$CHAT_ID&text=$text");
